@@ -1,14 +1,16 @@
 // code your solution here
-function saturdayFun(){
-return "This saturday, I want to read!";
-}
-
-function mondayWork (){
-    return "This Monday I will go to the office.";
-}
 
 
-function wrapAdjective (){
-    let result = wrapAdjective('*');
-    let emphatic = result("a hard worker");
-}
+    function saturdayFun(activity = "roller-skate"){
+        return `This Saturday, I want to ${activity}!`
+    }
+    
+    const mondayWork = function(activity = "go to the office"){
+        return `This Monday, I will ${activity}.`;
+    }
+    
+    function wrapAdjective(visual = "*"){
+        return function(adj = "special"){
+            return `You are ${visual}${adj}${visual}!`
+        }
+    }
